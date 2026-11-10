@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PYAARIII 🤍</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F4EA;
+    background-image: url("photos/lily-bg.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Georgia, serif;
+    color: #68594D;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.flower {
+    font-size: 35px;
+    margin: 15px;
+}
+
+h1 {
+    font-size: clamp(38px, 9vw, 55px);
+    color: #78836A;
+    margin: 18px 0;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #9B8A76;
+    line-height: 1.8;
+}
+
+/* TRANSLUCENT CARDS */
+
+.card {
+    background: rgba(255, 253, 247, 0.86);
+    border: 1px solid rgba(198, 168, 120, 0.45);
+    border-radius: 24px;
+    padding: 28px 22px;
+    margin-top: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(104, 89, 77, 0.12),
+        inset 0 0 15px rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    line-height: 1.9;
+    animation: appear 1s ease;
+}
+
+h2 {
+    color: #78836A;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 13px 0;
+}
+
+.heart {
+    font-size: 32px;
+    margin-top: 12px;
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.photo {
+    background: rgba(255, 253, 247, 0.9);
+    padding: 7px;
+    border-radius: 16px;
+    border: 1px solid rgba(198, 168, 120, 0.35);
+    box-shadow: 0 5px 15px rgba(104, 89, 77, 0.12);
+}
+
+.photo:first-child {
+    grid-column: span 2;
+}
+
+.photo img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 11px;
+    display: block;
+}
+
+.photo:first-child img {
+    height: 310px;
+}
+
+.photo p {
+    font-size: 13px;
+    color: #78836A;
+    margin: 8px 0 3px;
+    font-style: italic;
+}
+
+/* COMPLIMENTS */
+
+.compliment {
+    background: rgba(232, 235, 220, 0.82);
+    border: 1px solid rgba(120, 131, 106, 0.18);
+    border-radius: 15px;
+    padding: 15px 12px;
+    margin: 12px 0;
+    color: #68745D;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* BUTTON */
+
+button {
+    background: #92936F;
+    color: white;
+    border: 1px solid #C6A878;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(104, 89, 77, 0.15);
+}
+
+button:hover {
+    background: #78836A;
+    transform: scale(1.04);
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    line-height: 2;
+    margin-top: 22px;
+    animation: appear 1s ease;
+}
+
+footer {
+    margin-top: 35px;
+    color: #8C806E;
+    font-size: 14px;
+    line-height: 2;
+    text-shadow: 0 1px 5px #FFFDF7;
+}
+
+/* FLOATING HEARTS */
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: floatUp 7s linear forwards;
+    z-index: -1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 400px) {
+    .photo img {
+        height: 170px;
+    }
+
+    .photo:first-child img {
+        height: 250px;
+    }
+
+    .card {
+        padding: 24px 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+    <div class="flower">🤍 🌿 🤍</div>
+
+    <p class="subtitle">
+        A little something, made with love...
+    </p>
+
+    <h1>PYARUU 🤍</h1>
+
+    <p class="subtitle">
+        Because you deserve a proper apology. ❤️‍🩹
+    </p>
+
+
+    <!-- APOLOGY LETTER -->
+
+    <div class="card">
+
+        <h2>Pyarii Pyaruu, 🥺</h2>
+
+        <p>
+            Malai thahaxaina maile k sochera tyo react garey.
+            I genuinely don't know what was going through
+            my mind at that moment.
+        </p>
+
+        <p>
+            But one thing I know for sure...
+        </p>
+
+        <h2>I NEVER MEANT TO HURT YOU.</h2>
+
+        <p>
+            You were so excited to send me your pictures,
+            and I was genuinely so happy looking at those
+            wonderful photographs of yours.
+        </p>
+
+        <p>
+            I really was! I genuinely am happy whenever
+            you share your pictures with me.
+            I was just trying to tease you,
+            but I never realised that my silly text
+            would end up hurting your feelings.
+        </p>
+
+        <p>
+            I never wanted to spoil your excitement
+            or make you feel bad about sharing something
+            you were so happy about.
+        </p>
+
+        <p>
+            I REALLY WANT YOU TO SHARE YOUR PHOTOS.
+            I'm always delighted to add your pictures
+            to my little album. 🤍
+        </p>
+
+        <div class="heart">🥺❤️‍🩹</div>
+
+        <p>
+            I'm truly, truly sorry, Pyaruu.
+        </p>
+
+    </div>
+
+
+    <!-- HER THREE PHOTOGRAPHS -->
+
+    <div class="card">
+
+        <h2>A Little Gallery of You 🌷</h2>
+
+        <p class="subtitle">
+            COUNTLESS REASONS TO SMILE 😊😚
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo">
+                <img src="photos/pyaruu1.jpg"
+                     alt="Pyaruu's first picture">
+                <p>Your beautiful smile 🌸</p>
+            </div>
+
+            <div class="photo">
+                <img src="photos/pyaruu2.jpg"
+                     alt="Pyaruu's second picture">
+                <p>Simply adorable 🤍</p>
+            </div>
+
+            <div class="photo">
+                <img src="photos/pyaruu3.jpg"
+                     alt="Pyaruu's third picture">
+                <p>Absolutely gorgeous ✨</p>
+            </div>
+
+        </div>
+
+        <p style="margin-top:20px;font-style:italic">
+            Every picture has its own charm.
+        </p>
+
+    </div>
+
+
+    <!-- COMPLIMENTS -->
+
+    <div class="card">
+
+        <h2>And now, let me tell you something...</h2>
+
+        <p>
+            Have I mentioned how absolutely gorgeous
+            you look in those pictures?
+        </p>
+
+        <div class="compliment">
+            Your smile is genuinely one of the prettiest things. 🌸
+        </div>
+
+        <div class="compliment">
+            Those beautiful eyes of yours deserve their own poetry. ✨
+        </div>
+
+        <div class="compliment">
+            Your expressions are ridiculously adorable.
+        </div>
+
+        <div class="compliment">
+            You have the sweetest little charm.
+        </div>
+
+        <div class="compliment">
+            You're effortlessly beautiful and unbelievably photogenic.
+        </div>
+
+        <div class="compliment">
+            Even a thousand compliments wouldn't be enough
+            to describe your beauty.
+        </div>
+
+        <div class="compliment">
+            You're amazingly beautiful, Pyariii. 🤍
+        </div>
+
+    </div>
+
+
+    <!-- FINAL MESSAGE -->
+
+    <div class="card">
+
+        <h2>One Last Thing... 💌</h2>
+
+        <p>
+            I HOPE YOU NEVER HESITATE TO SHARE YOUR HAPPINESS
+            WITH ME BECAUSE OF ONE SILLY MISTAKE OF MINE. 😔
+        </p>
+
+        <p>
+            Your excitement matters. Your feelings matter.
+            And you deserve to feel appreciated.
+        </p>
+
+        <button onclick="reveal()">
+            Open your little surprise 💌
+        </button>
+
+        <div id="surprise" class="hidden">
+
+            <div class="heart">🌷🤍🦋</div>
+
+            <h2>YOU ARE BEAUTIFUL, PYARUU!</h2>
+
+            <p>
+                Not just in those photographs.<br>
+                Not just on your best days.<br>
+                But in all those little moments
+                you probably don't even notice.
+            </p>
+
+            <p>
+                One silly reaction should never make you question
+                how much I adore having you as my sister.
+                And I hope you always know
+                just how special and appreciated you are.
+            </p>
+
+            <h2>I'm sorrieee. 🥺❤️‍🩹</h2>
+
+            <p>
+                With lots of love,<br>
+                Your IDIOT BROTHER 😔🥺🤍
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        Made with sincerity, a little regret,
+        and lots of love. 🌷
+        <br>
+        — Lors ✒️
+    </footer>
+
+</main>
+
+
+<script>
+
+// Reveal the surprise message
+
+function reveal() {
+    const surprise = document.getElementById("surprise");
+
+    surprise.classList.remove("hidden");
+
+    surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+
+// Floating hearts and flowers
+
+const symbols = ["🤍", "🌸", "✨", "🌷", "💕"];
+
+function createFloating() {
+
+    const item = document.createElement("div");
+
+    item.className = "floating";
+
+    item.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+
+    item.style.fontSize =
+        (14 + Math.random() * 15) + "px";
+
+    item.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => {
+        item.remove();
+    }, 9000);
+}
+
+setInterval(createFloating, 900);
+
+</script>
+
+</body>
+</html>
