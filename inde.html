@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Sister 💙🩷</title>
+
+<style>
+
+/* =====================================================
+   COLOURS
+   ===================================================== */
+
+:root {
+    --blue: #6fa8ff;
+    --deep-blue: #315ea8;
+    --pink: #f48fb1;
+    --light-pink: #ffdce9;
+    --lavender: #c9b8ff;
+    --white: #ffffff;
+    --cream: #fffaf5;
+    --green: #8fbe8b;
+    --gold: #e8c56a;
+    --text: #35415a;
+}
+
+
+/* =====================================================
+   GENERAL
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(111,168,255,0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(244,143,177,0.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fffaf5,
+            #f7fbff
+        );
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =====================================================
+   FLOWERS / PETALS
+   ===================================================== */
+
+.petals {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+.petal {
+    position: absolute;
+
+    width: 12px;
+    height: 18px;
+
+    border-radius: 80% 20% 80% 20%;
+
+    opacity: 0.55;
+
+    animation:
+        fall linear infinite;
+}
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(-10vh)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(540deg);
+    }
+}
+
+
+/* =====================================================
+   MEMORY PASSWORD SCREEN
+   ===================================================== */
+
+#memoryGate {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.gate-card {
+
+    width: min(700px, 94vw);
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(49,94,168,0.18);
+
+    border:
+        1px solid
+        rgba(111,168,255,0.2);
+
+    z-index: 2;
+}
+
+.gate-small {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 0.75rem;
+
+    color: var(--deep-blue);
+}
+
+.gate-card h1 {
+
+    margin: 15px 0;
+
+    font-size:
+        clamp(2.2rem, 8vw, 4.5rem);
+
+    color: var(--deep-blue);
+}
+
+.gate-card p {
+
+    line-height: 1.8;
+
+    font-size: 1.1rem;
+}
+
+.question {
+
+    margin-top: 35px;
+
+    font-size:
+        clamp(1.3rem, 4vw, 1.8rem);
+
+    font-weight: bold;
+}
+
+.answer {
+
+    width: min(450px, 90%);
+
+    margin-top: 22px;
+
+    padding: 15px 20px;
+
+    border-radius: 999px;
+
+    border: 2px solid #d9e1f2;
+
+    outline: none;
+
+    text-align: center;
+
+    background: white;
+}
+
+.answer:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 5px
+        rgba(111,168,255,0.12);
+}
+
+.unlock-button {
+
+    margin-top: 18px;
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--deep-blue),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(49,94,168,0.2);
+
+    transition: 0.25s;
+}
+
+.unlock-button:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+}
+
+.feedback {
+
+    min-height: 30px;
+
+    margin-top: 18px;
+
+    font-weight: bold;
+
+    color: #d86b8f;
+}
+
+.progress {
+
+    margin-top: 10px;
+
+    opacity: 0.6;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   WEBSITE
+   ===================================================== */
+
+#website {
+
+    display: none;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 50px 20px;
+}
+
+.hero-content {
+
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(3rem, 10vw, 7rem);
+
+    color: var(--deep-blue);
+}
+
+.hero p {
+
+    margin-top: 20px;
+
+    font-size:
+        clamp(1.1rem, 4vw, 1.5rem);
+
+    line-height: 1.8;
+}
+
+.scroll-button {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: var(--deep-blue);
+
+    background:
+        rgba(255,255,255,0.8);
+
+    border:
+        1px solid
+        rgba(49,94,168,0.2);
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+.section {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    position: relative;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title small {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #9a6f8a;
+}
+
+.section-title h2 {
+
+    margin-top: 10px;
+
+    font-size:
+        clamp(2rem, 6vw, 3.2rem);
+
+    color: var(--deep-blue);
+}
+
+
+/* =====================================================
+   PERSONAL MESSAGE
+   ===================================================== */
+
+.message {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 18px 55px
+        rgba(80,95,135,0.1);
+}
+
+.message p {
+
+    line-height: 2;
+
+    font-size: 1.08rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   STORY
+   ===================================================== */
+
+.timeline {
+
+    display: grid;
+
+    gap: 20px;
+}
+
+.memory {
+
+    padding: 28px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.8);
+
+    border:
+        1px solid
+        rgba(111,168,255,0.15);
+
+    box-shadow:
+        0 12px 35px
+        rgba(80,95,135,0.08);
+}
+
+.memory-icon {
+
+    font-size: 1.8rem;
+
+    margin-right: 8px;
+}
+
+.memory h3 {
+
+    display: inline;
+
+    color: var(--deep-blue);
+}
+
+.memory p {
+
+    margin-top: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   SIBLING CHAOS
+   ===================================================== */
+
+.chaos {
+
+    padding: 45px;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(111,168,255,0.15),
+            rgba(244,143,177,0.18)
+        );
+}
+
+.chaos p {
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   MEMORIES
+   ===================================================== */
+
+.media-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+.media-card {
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px
+        rgba(80,95,135,0.12);
+}
+
+.media-card img,
+.media-card video {
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 400px;
+
+    object-fit: cover;
+}
+
+.media-caption {
+
+    padding: 20px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   MUSIC
+   ===================================================== */
+
+.music-box {
+
+    max-width: 650px;
+
+    margin: 40px auto 0;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px
+        rgba(80,95,135,0.1);
+}
+
+.music-box h3 {
+
+    margin-bottom: 15px;
+
+    color: var(--deep-blue);
+}
+
+audio {
+
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   BIG RAKHI
+   ===================================================== */
+
+.rakhi-section {
+
+    text-align: center;
+}
+
+.rakhi {
+
+    width:
+        min(560px, 90vw);
+
+    margin:
+        0 auto 35px;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(50,70,120,0.2)
+        );
+
+    animation:
+        rakhiFloat 4s ease-in-out infinite;
+}
+
+@keyframes rakhiFloat {
+
+    50% {
+
+        transform:
+            translateY(-10px);
+    }
+}
+
+.rakhi-message {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    line-height: 2;
+
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   SURPRISE
+   ===================================================== */
+
+.surprise-box {
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244,143,177,0.15),
+            rgba(111,168,255,0.15)
+        );
+}
+
+.surprise-message {
+
+    margin-top: 30px;
+
+    line-height: 2;
+
+    font-size: 1.15rem;
+}
+
+
+/* =====================================================
+   FINAL
+   ===================================================== */
+
+.final {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.final h2 {
+
+    font-size:
+        clamp(2rem, 7vw, 4rem);
+
+    color: var(--deep-blue);
+}
+
+.final p {
+
+    margin-top: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:600px) {
+
+    .gate-card {
+
+        padding:
+            35px 20px;
+    }
+
+    .section {
+
+        padding:
+            75px 16px;
+    }
+
+    .message {
+
+        padding:
+            25px;
+    }
+
+    .chaos {
+
+        padding:
+            30px 20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FLOATING FLOWERS
+     ===================================================== -->
+
+<div class="petals" id="petals"></div>
+
+
+<!-- =====================================================
+     MEMORY PASSWORD GATE
+     ===================================================== -->
+
+<section id="memoryGate">
+
+    <div class="gate-card">
+
+        <div class="gate-small">
+            🔐 A little memory stands between you
+            and what's waiting inside
+        </div>
+
+        <h1>
+            Let's see if you remember... 🌸
+        </h1>
+
+        <p>
+            Three memories.
+            Three answers.
+            One little door into something made for you. 💙🩷
+        </p>
+
+
+        <div id="questionArea">
+
+            <div
+                class="question"
+                id="questionText">
+            </div>
+
+
+            <input
+                type="text"
+                id="answerInput"
+                class="answer"
+                placeholder="Type your answer..."
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <br>
+
+
+            <button
+                class="unlock-button"
+                id="checkButton">
+
+                Unlock this memory ✨
+
+            </button>
+
+
+            <div
+                class="feedback"
+                id="feedback">
+            </div>
+
+
+            <div
+                class="progress"
+                id="progress">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTUAL WEBSITE
+     ===================================================== -->
+
+<div id="website">
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content reveal">
+
+        <div class="gate-small">
+            🪢 A little something for you
+        </div>
+
+        <h1>
+            Hey, Sister. 💙🩷
+        </h1>
+
+        <p>
+            So... you made it in. 😝🤞
+            <br>
+            I guess you really do remember
+            our little story.
+        </p>
+
+        <a
+            href="#message"
+            class="scroll-button">
+
+            Come inside 🌸
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSONAL MESSAGE
+     ===================================================== -->
+
+<section
+    class="section reveal"
+    id="message">
+
+    <div class="section-title">
+
+        <small>
+            For you
+        </small>
+
+        <h2>
+            Happy Raksha Bandhan,
+            Sister. 🪢🩷
+        </h2>
+
+    </div>
+
+
+    <div class="message">
+
+        <!-- WRITE YOUR MESSAGE HERE -->
+
+        <p>
+            YOUR PERSONAL MESSAGE GOES HERE.
+        </p>
+
+        <p>
+            You can write this in Roman Nepali,
+            English, or naturally mix both.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR STORY
+     ===================================================== -->
+
+<section class="section reveal">
+
+    <div class="section-title">
+
+        <small>
+            Our story
+        </small>
+
+        <h2>
+            Little pieces of us. 🌸
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="memory">
+
+            <span class="memory-icon">
+                🪢
+            </span>
+
+            <h3>
+                The beginning
+            </h3>
+
+            <p>
+                Write about where you first
+                saw or met each other.
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <span class="memory-icon">
+                🎮
+            </span>
+
+            <h3>
+                The first game
+            </h3>
+
+            <p>
+                Write about the first game
+                you played together.
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <span class="memory-icon">
+                💬
+            </span>
+
+            <h3>
+                The random conversations
+            </h3>
+
+            <p>
+                Add one of your favourite
+                conversations or memories.
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <span class="memory-icon">
+                🫶
+            </span>
+
+            <h3>
+                Somehow, family
+            </h3>
+
+            <p>
+                Write about how you eventually
+                became siblings.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SIBLING CHAOS
+     ===================================================== -->
+
+<section class="section reveal">
+
+    <div class="chaos">
+
+        <div class="section-title">
+
+            <small>
+                Obviously...
+            </small>
+
+            <h2>
+                It wasn't all sunshine
+                and flowers. 😝
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Write your funny memories,
+            teasing, inside jokes,
+            annoying moments,
+            or anything else here.
+
+            😝🤞😂
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMORIES
+     ===================================================== -->
+
+<section class="section reveal">
+
+    <div class="section-title">
+
+        <small>
+            Memories
+        </small>
+
+        <h2>
+            Photos, videos & songs. 📸🎥🎵
+        </h2>
+
+    </div>
+
+
+    <div class="media-grid">
+
+
+        <!-- PHOTO -->
+
+        <div class="media-card">
+
+            <img
+                src="media/photo1.jpg"
+                alt="Our memory">
+
+            <div class="media-caption">
+
+                <strong>
+                    Memory one
+                </strong>
+
+                <br>
+
+                Write your caption here. 🌸
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VIDEO -->
+
+        <div class="media-card">
+
+            <video
+                controls
+                poster="media/video1-poster.jpg">
+
+                <source
+                    src="media/video1.mp4"
+                    type="video/mp4">
+
+                Your browser does not support
+                video playback.
+
+            </video>
+
+            <div class="media-caption">
+
+                <strong>
+                    Memory two
+                </strong>
+
+                <br>
+
+                Write your video caption here. 🎥
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SECOND PHOTO -->
+
+        <div class="media-card">
+
+            <img
+                src="media/photo2.jpg"
+                alt="Another memory">
+
+            <div class="media-caption">
+
+                <strong>
+                    Memory three
+                </strong>
+
+                <br>
+
+                Write your caption here. 🩷
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SONG -->
+
+    <div class="music-box">
+
+        <h3>
+            🎵 A song for us
+        </h3>
+
+        <p>
+            Put your chosen song in the
+            <strong>media</strong> folder.
+        </p>
+
+        <audio controls>
+
+            <source
+                src="media/song.mp3"
+                type="audio/mpeg">
+
+            Your browser does not support
+            audio playback.
+
+        </audio>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BIG PERSONALIZED RAKHI
+     ===================================================== -->
+
+<section
+    class="section reveal rakhi-section">
+
+    <div class="section-title">
+
+        <small>
+            This one's for you
+        </small>
+
+        <h2>
+            Your Rakhi. 🪢
+        </h2>
+
+    </div>
+
+
+    <!--
+
+        THIS IS A LARGE RAKHI DESIGN.
+
+        CHANGE "SISTER'S NAME"
+        TO HER ACTUAL NAME.
+
+    -->
+
+    <svg
+        class="rakhi"
+        viewBox="0 0 600 600"
+        xmlns="http://www.w3.org/2000/svg">
+
+
+        <defs>
+
+            <radialGradient
+                id="rakhiCenter">
+
+                <stop
+                    offset="0%"
+                    stop-color="#ffffff"/>
+
+                <stop
+                    offset="55%"
+                    stop-color="#ffdce9"/>
+
+                <stop
+                    offset="100%"
+                    stop-color="#f48fb1"/>
+
+            </radialGradient>
+
+
+            <linearGradient
+                id="rakhiThread">
+
+                <stop
+                    offset="0%"
+                    stop-color="#315ea8"/>
+
+                <stop
+                    offset="50%"
+                    stop-color="#f48fb1"/>
+
+                <stop
+                    offset="100%"
+                    stop-color="#315ea8"/>
+
+            </linearGradient>
+
+        </defs>
+
+
+
+        <!-- RAKHI THREAD -->
+
+        <path
+            d="
+            M 70 300
+            C 170 220,
+              210 220,
+              250 250
+            "
+            fill="none"
+            stroke="url(#rakhiThread)"
+            stroke-width="20"
+            stroke-linecap="round"
+        />
+
+
+        <path
+            d="
+            M 530 300
+            C 430 220,
+              390 220,
+              350 250
+            "
+            fill="none"
+            stroke="url(#rakhiThread)"
+            stroke-width="20"
+            stroke-linecap="round"
+        />
+
+
+
+        <!-- FLOWER PETALS -->
+
+        <g
+            transform="translate(300 300)">
+
+
+            <ellipse
+                cx="0"
+                cy="-145"
+                rx="50"
+                ry="100"
+                fill="#6fa8ff"/>
+
+
+            <ellipse
+                cx="103"
+                cy="-103"
+                rx="50"
+                ry="100"
+                fill="#f48fb1"
+                transform="rotate(45)"
+            />
+
+
+            <ellipse
+                cx="145"
+                cy="0"
+                rx="50"
+                ry="100"
+                fill="#c9b8ff"
+                transform="rotate(90)"
+            />
+
+
+            <ellipse
+                cx="103"
+                cy="103"
+                rx="50"
+                ry="100"
+                fill="#8fbe8b"
+                transform="rotate(135)"
+            />
+
+
+            <ellipse
+                cx="0"
+                cy="145"
+                rx="50"
+                ry="100"
+                fill="#f48fb1"
+            />
+
+
+            <ellipse
+                cx="-103"
+                cy="103"
+                rx="50"
+                ry="100"
+                fill="#6fa8ff"
+                transform="rotate(45)"
+            />
+
+
+            <ellipse
+                cx="-145"
+                cy="0"
+                rx="50"
+                ry="100"
+                fill="#ffffff"
+                transform="rotate(90)"
+            />
+
+
+            <ellipse
+                cx="-103"
+                cy="-103"
+                rx="50"
+                ry="100"
+                fill="#b9d7ff"
+                transform="rotate(135)"
+            />
+
+
+            <!-- GOLD RING -->
+
+            <circle
+                cx="0"
+                cy="0"
+                r="105"
+                fill="url(#rakhiCenter)"
+                stroke="#e8c56a"
+                stroke-width="12"
+            />
+
+
+            <circle
+                cx="0"
+                cy="0"
+                r="83"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-dasharray="6 9"
+            />
+
+
+            <!-- CHANGE HER NAME -->
+
+            <text
+                x="0"
+                y="-5"
+                text-anchor="middle"
+                fill="#315ea8"
+                font-size="28"
+                font-family="Georgia">
+
+                SISTER'S NAME
+
+            </text>
+
+
+            <text
+                x="0"
+                y="30"
+                text-anchor="middle"
+                fill="#315ea8"
+                font-size="14"
+                letter-spacing="4">
+
+                SISTER
+
+            </text>
+
+
+        </g>
+
+    </svg>
+
+
+
+    <div class="rakhi-message">
+
+        <p>
+            Write the message that goes with
+            the Rakhi here. 🩷
+        </p>
+
+        <p>
+            Maybe we weren't born siblings...
+            but somehow, we found each other. 🫶💙
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL SURPRISE
+     ===================================================== -->
+
+<section class="section reveal">
+
+    <div class="surprise-box">
+
+        <div class="section-title">
+
+            <small>
+                One last thing...
+            </small>
+
+            <h2>
+                🎁 There's something
+                waiting for you.
+            </h2>
+
+        </div>
+
+
+        <button
+            class="unlock-button"
+            id="surpriseButton">
+
+            Open it 🌸
+
+        </button>
+
+
+        <div
+            class="surprise-message"
+            id="surpriseMessage"
+            style="display:none;">
+
+            <p>
+                YOUR FINAL SURPRISE MESSAGE
+                GOES HERE.
+            </p>
+
+            <p>
+                🥹💙🩷
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL PAGE
+     ===================================================== -->
+
+<section class="final reveal">
+
+    <div>
+
+        <div
+            style="
+            font-size:4rem;
+            margin-bottom:20px;
+            ">
+
+            🌸💙🩷🌸
+
+        </div>
+
+
+        <h2>
+            Happy Raksha Bandhan,
+            Sister. 🪢
+        </h2>
+
+
+        <p>
+            YOUR FINAL LINE GOES HERE.
+        </p>
+
+
+        <p>
+
+            <strong>
+                — Your annoying brother 😝🤞
+            </strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   PERSONAL DETAILS
+   ===================================================== */
+
+/*
+    THIS IS WHERE YOU SET THE THREE ANSWERS.
+
+    For this sister:
+
+    1. Bus
+    2. Pyara
+    3. Minimilitia
+*/
+
+const questions = [
+
+    {
+        question:
+            "Where did our story first begin?",
+
+        answer:
+            "Bus"
+    },
+
+
+    {
+        question:
+            "What name do you so often call me?",
+
+        answer:
+            "Pyara"
+    },
+
+
+    {
+        question:
+            "What was the first game we ever played together?",
+
+        answer:
+            "Minimilitia"
+    }
+
+];
+
+
+/* =====================================================
+   PASSWORD SYSTEM
+   ===================================================== */
+
+let currentQuestion = 0;
+
+
+const questionText =
+    document.getElementById(
+        "questionText"
+    );
+
+
+const answerInput =
+    document.getElementById(
+        "answerInput"
+    );
+
+
+const checkButton =
+    document.getElementById(
+        "checkButton"
+    );
+
+
+const feedback =
+    document.getElementById(
+        "feedback"
+    );
+
+
+const progress =
+    document.getElementById(
+        "progress"
+    );
+
+
+function cleanAnswer(answer) {
+
+    return answer
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+
+}
+
+
+function showQuestion() {
+
+    questionText.textContent =
+        questions[currentQuestion].question;
+
+
+    progress.textContent =
+        "Memory " +
+        (currentQuestion + 1) +
+        " of " +
+        questions.length;
+
+
+    answerInput.value = "";
+
+    feedback.textContent = "";
+
+    answerInput.focus();
+
+}
+
+
+checkButton.addEventListener(
+    "click",
+    checkAnswer
+);
+
+
+answerInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if(event.key === "Enter") {
+
+            checkAnswer();
+
+        }
+
+    }
+);
+
+
+function checkAnswer() {
+
+    const userAnswer =
+        cleanAnswer(
+            answerInput.value
+        );
+
+
+    const correctAnswer =
+        cleanAnswer(
+            questions[currentQuestion].answer
+        );
+
+
+    if(
+        userAnswer ===
+        correctAnswer
+    ) {
+
+
+        currentQuestion++;
+
+
+        if(
+            currentQuestion >=
+            questions.length
+        ) {
+
+            unlockWebsite();
+
+            return;
+
+        }
+
+
+        feedback.textContent =
+            "That's it. 🌸";
+
+
+        feedback.style.color =
+            "#315ea8";
+
+
+        setTimeout(
+            showQuestion,
+            500
+        );
+
+
+    } else {
+
+
+        feedback.textContent =
+            "Hmm... are you sure?😝 Try again";
+
+
+        feedback.style.color =
+            "#d86b8f";
+
+
+        answerInput.select();
+
+    }
+
+}
+
+
+/* =====================================================
+   UNLOCK
+   ===================================================== */
+
+function unlockWebsite() {
+
+    feedback.textContent =
+        "You remembered. 🥹💙";
+
+
+    feedback.style.color =
+        "#315ea8";
+
+
+    checkButton.disabled = true;
+
+
+    setTimeout(
+        function() {
+
+            const gate =
+                document.getElementById(
+                    "memoryGate"
+                );
+
+
+            gate.style.transition =
+                "opacity 1s ease";
+
+
+            gate.style.opacity =
+                "0";
+
+
+            setTimeout(
+                function() {
+
+                    gate.style.display =
+                        "none";
+
+
+                    document.getElementById(
+                        "website"
+                    ).style.display =
+                        "block";
+
+
+                    window.scrollTo(
+                        0,
+                        0
+                    );
+
+
+                    document
+                        .querySelectorAll(
+                            ".reveal"
+                        )
+                        .forEach(
+                            element => {
+
+                                element.classList.add(
+                                    "visible"
+                                );
+
+                            }
+                        );
+
+                },
+
+                1000
+            );
+
+        },
+
+        1200
+    );
+
+}
+
+
+/* =====================================================
+   FALLING FLOWERS
+   ===================================================== */
+
+function createPetals() {
+
+    const container =
+        document.getElementById(
+            "petals"
+        );
+
+
+    const colours = [
+
+        "#6fa8ff",
+        "#f48fb1",
+        "#ffffff",
+        "#c9b8ff",
+        "#e8c56a"
+
+    ];
+
+
+    for(
+        let i = 0;
+        i < 35;
+        i++
+    ) {
+
+        const petal =
+            document.createElement(
+                "div"
+            );
+
+
+        petal.className =
+            "petal";
+
+
+        petal.style.left =
+            Math.random() * 100 +
+            "%";
+
+
+        petal.style.top =
+            -20 -
+            Math.random() * 50 +
+            "%";
+
+
+        petal.style.background =
+            colours[
+                Math.floor(
+                    Math.random() *
+                    colours.length
+                )
+            ];
+
+
+        petal.style.animationDuration =
+            6 +
+            Math.random() * 10 +
+            "s";
+
+
+        petal.style.animationDelay =
+            Math.random() * 8 +
+            "s";
+
+
+        container.appendChild(
+            petal
+        );
+
+    }
+
+}
+
+
+createPetals();
+
+
+
+/* =====================================================
+   SCROLL ANIMATIONS
+   ===================================================== */
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if(
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".reveal"
+    )
+    .forEach(
+        element => {
+
+            observer.observe(
+                element
+            );
+
+        }
+    );
+
+
+
+/* =====================================================
+   FINAL SURPRISE
+   ===================================================== */
+
+const surpriseButton =
+    document.getElementById(
+        "surpriseButton"
+    );
+
+
+const surpriseMessage =
+    document.getElementById(
+        "surpriseMessage"
+    );
+
+
+surpriseButton.addEventListener(
+    "click",
+    function() {
+
+        surpriseMessage.style.display =
+            "block";
+
+
+        surpriseButton.textContent =
+            "Opened 🥹💙";
+
+
+        surpriseButton.disabled =
+            true;
+
+    }
+);
+
+
+/* =====================================================
+   START
+   ===================================================== */
+
+showQuestion();
+
+</script>
+
+</body>
+</html>
